@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;500&display=swap');
+
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* Primary */
+--violet: hsl(263, 55%, 52%);
+--grayish-blue: hsl(217, 19%, 35%);
+--blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+    /* Neutral */
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+
+}
+
+body {
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    Font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;  
+    background-color: var(--Light-grayish-blue);
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.container {
+    
+    /* min-width: 80vw; */
+    /* max-width: 80vw; */
+    display: grid;
+    max-width: 900px;
+    max-height: 90vh;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit,200px);
+    grid-template-rows: repeat(2,1fr);
+    
+}
+
+.item {
+    padding: 20px;
+    border-radius: 10px;
+    
+    
+}
+
+.item:nth-of-type(1){
+    background-color: var(--violet);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    position: relative;
+    background-image:url("/images/bg-pattern-quotation.svg");
+    background-position: 80% 0;
+    background-repeat: no-repeat;
+
+}
+
+.item:nth-of-type(2){
+    background-color: var(--grayish-blue);
+}
+
+.item:nth-of-type(3),.item:nth-of-type(4){
+    background-color: var(--White);
+    box-shadow: 5px 5px 17px -5px rgba(0,0,0,0.25);
+}
+.item:nth-of-type(1),.item:nth-of-type(2),.item:nth-of-type(5){
+    color: var(--White);
+}
+
+.item:nth-of-type(3){
+    grid-column-start:4 ;
+    grid-column-end: 5;
+    grid-row-start: -1;
+    grid-row-end: 1;    
+}
+
+.item:nth-of-type(5){
+    background-color: var(--blackish-blue);
+    grid-column-start: -4;
+    grid-column-end: -2;
+}
+
+img {
+    border-radius: 50%;
+    border: var(--White) solid 1px;
+}
+
+.box {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+section { 
+    display: flex;
+    align-items: center;
+    gap: 10px;   
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.name, .main{
+    font-weight: 500;
+}
+
+.verGrad{
+    opacity: 50%;
+}
+
+.details{
+    opacity: 70%;
+}
